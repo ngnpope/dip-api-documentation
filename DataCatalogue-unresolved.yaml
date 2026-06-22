@@ -15,6 +15,8 @@
 # ------------------------------------------------------------------------------------
 # 2.1.0 02/02/2026             Support for June/July release
 #       19/03/2026    73592    DI-566-List-Of-MPANS-On-Site - nullable becomes false
+#       22/06/2026             For DI-137, DI-096, DI-076, DI-166, DI-039, DI-126 
+#                              comment out - null for where nullable:true 
 # 2.0.1 27/10/2024    CP1067   Support 2.0.1 release
 # 1.8.3 09/09/2024             Support new IR8.3 release  
 #       09/09/2024    DIN-1114 Correct example booelans to be lower case 
@@ -332,7 +334,7 @@ components:
         - _M
         - _N
         - _P
-        - null  # - DIN-476 - change for nullable enum
+#        - null  # - DIN-476 - change for nullable enum
           
 #    DI-040-Line-Loss-Factor-Class-Effective-From-Date:
         # The data and time that a line loss factor took effect for a distribution network.
@@ -577,7 +579,7 @@ components:
           - '8' # Disconnected 
           - '9' # Consumption Amendment
           - '10' # NonSmart
-          - null # - DIN-476 - change for nullable enum
+#          - null # - DIN-476 - change for nullable enum
    
     DI-077-CSS-RMP-DeActivation-Date:
         # Date/Time at which an MPAN is made Inactive at CSS 
@@ -819,7 +821,7 @@ components:
         - '58' # Unable to complete installation due to height/position of meter
         - '88' # Request rejected
         - '89' # Fault resolution completion report
-        - null # - DIN-476 - change for nullable enum
+#        - null # - DIN-476 - change for nullable enum
         
     DI-097-Failure-Energise-De-Energise-Reason-Code:
         description : The reason why the Energisation or De-Energisation has not been carried out.
@@ -971,7 +973,7 @@ components:
           - S  # Six Monthly
           - A # Annually
           - x # Obfuscated value #DIN-858
-          - null # - DIN-476 - change for nullable enum
+#          - null # - DIN-476 - change for nullable enum
 
     DI-127-Metered-Indicator:
         description : An indicator to show whether the Consumption Component is for a metered supply or unmetered supply.
@@ -1039,7 +1041,7 @@ components:
           - D # Declined
           - E # Existing 
           - F # Failed
-          - null # - DIN-476 - change for nullable enum
+#          - null # - DIN-476 - change for nullable enum
             
     DI-138-Customer-Direct-Contract-Data-Service-DIP-ID:
         # The DIP ID of the Data Service that has recorded the existance of a Customer Direct Contract for that MPAN.
@@ -1213,7 +1215,7 @@ components:
           - S # Stolen or Lost Meter
           - T # Tampering or Theft
           - X # Other
-          - null # - DIN-476 - change for nullable enum
+#          - null # - DIN-476 - change for nullable enum
 
     DI-167-RMPStatus-Effective-From-Date:
         # RMP Status Eff From Date
