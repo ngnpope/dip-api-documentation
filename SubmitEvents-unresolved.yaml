@@ -72,6 +72,7 @@
 #       17/03/2026  51136/      Changes to Replay to support bulk replay
 #       19/02/2025              Minor edits to align example status codes with agreed list
 #       15/04/2025              Rollback changes to support bulk replay and status message replay  
+#       22/06/2026              further changes need rolling back 
 # 2.0.2 16/09/2025  49300/017   Introduce Status Message replay/requeue - need to split out from v2.0.1 into 
 #                               separate release  
 # 2.0.1 16/09/2025              First post go-live release
@@ -83,7 +84,7 @@
 # 1.8.3 09/09/2024              Support new IR8.3 release  
 # 1.8.2 12/08/2024              Support new IR8.2 release  
 # 1.8.1 03/05/2024              Support new IR8.1 release  
-#       15/05/2024   DIN-974    Align webhook responses for statusMessage and dip-channel
+#       15/05/2024   DIN-974    Align webhook responses for  and dip-channel
 #       23/04/2024   DIN-1018   Correct validation endpoints and add /validate/IF-009/MPANReconnection
 #       22/05/2024   DIN-1031   Update to Standard Response Body to reflect mandatory null 
 #       28/05/2024   DIN-962    Make MPAN optional on replay/requeue
@@ -220,7 +221,8 @@ info:
      New for IR7.2 - DIP Message Validation APIs - see DIP Message Validation Endpoints Section below <br><br>
      ** examples available in post /dip-channel/{id}<br>  
      any comments please relay to DIPManager@elexon.co.uk
-servers: null
+servers: 
+  - url: https://dip-api-documentation.elexon.co.uk/
 security:
   - ApiKeyAuth: []
 
@@ -591,11 +593,11 @@ paths:
             description: Forbidden
 
 
-  /statusmessage: 
+  /: 
     post:
       summary: Submit a series of status messages
       description: Allows a Market Participant to submit a series of status messages 
-      operationId: submitStatusMessage
+      operationId: submit
       tags: 
         - Status Messages
       parameters:
@@ -656,7 +658,7 @@ paths:
           description: HTTP Version Not Supported
 
 
-  /statusmessage/config/{recipient-id}:
+  //config/{recipient-id}:
     parameters:
         - $ref: '#/components/parameters/MessageRecipientId'
         - $ref: '#/components/parameters/CommonSignatureHeader'
@@ -7041,23 +7043,23 @@ components:
             $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-992N-Schema-Version' 
         
 
-    StatusMessageRequest:
-      type: object
-      required:
-          - datetimeFrom
-          - datetimeTo
+#    StatusMessageRequest:
+#      type: object
+#      required:
+#          - datetimeFrom
+#          - datetimeTo
 
-      properties:
-        datetimeFrom:
-          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
-        datetimeTo:
-          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
-        transactionID:
-          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-014N-DIPTransactionID' 
-        senderUniqueReference : 
-          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-995N-SenderUniqueReference'
-        correlationID:
-          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-011N-CorrelationID'
+#     properties:
+#       datetimeFrom:
+#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
+#       datetimeTo:
+#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
+#       transactionID:
+#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-014N-DIPTransactionID' 
+#       senderUniqueReference : 
+#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-995N-SenderUniqueReference'
+#       correlationID:
+#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-011N-CorrelationID'
 
 
 
@@ -7123,33 +7125,33 @@ components:
 
 #       16/09/2025  49300/017 
 
-    RequeueStatus:
-      type: object
-      properties:
-          percentComplete: 
-              description: Percentage complete
-              type: number
-              example: 50
-          totalTransactions:
-              description: Total number of outstanding transactions 
-              type: number
-              example: 10000
-          processedTransactions:
-            description: Total number of processed transactions 
-            type: number
-            example: 5000
-          status : 
-            description: Requeue Status
-            type: string
-            enum: [Processing,Completed,Failed]
-            example: Processing
+#    RequeueStatus:
+#      type: object
+#      properties:
+#          percentComplete: 
+#              description: Percentage complete
+#              type: number
+#              example: 50
+#          totalTransactions:
+#              description: Total number of outstanding transactions 
+#              type: number
+#              example: 10000
+#          processedTransactions:
+#            description: Total number of processed transactions 
+#            type: number
+#            example: 5000
+#          status : 
+#            description: Requeue Status
+#            type: string
+#            enum: [Processing,Completed,Failed]
+#            example: Processing
 
-    RequeueId:
-            description: Requeue Id
-            type: string
-            minLength : 1
-            maxLength : 200
-            example: '2199456789-20222313-12345687a1234567a'            
+#    RequeueId:
+#            description: Requeue Id
+#            type: string
+#            minLength : 1
+#            maxLength : 200
+#            example: '2199456789-20222313-12345687a1234567a'            
 
 
 ## End ##
