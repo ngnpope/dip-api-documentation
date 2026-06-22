@@ -518,7 +518,7 @@ paths:
       description: Allows a Market Participant to replay messages  
       operationId: replayPublication
       tags: 
-          - DIP Channel Replay/
+          - DIP Channel Replay/Requeue
       parameters:
         - $ref: '#/components/parameters/MessageChannel'
         - $ref: '#/components/parameters/MessageRecipientId'
@@ -555,13 +555,13 @@ paths:
         '403':
             description: Forbidden
 
-  /dip-channel/{id}//{recipient-id}:
+  /dip-channel/{id}/requeue/{recipient-id}:
     post:
-      summary:  messages on DIP Channel webhook  
+      summary: Requeue messages on DIP Channel webhook  
       description: Allows a Market Participant to replay messages  
-      operationId: Publication
+      operationId: requeuePublication
       tags: 
-          - DIP Channel Replay/
+          - DIP Channel Replay/Requeue
       parameters:
         - $ref: '#/components/parameters/MessageChannel'
         - $ref: '#/components/parameters/MessageRecipientId'
@@ -579,7 +579,7 @@ paths:
                 
       responses:
         '200':
-          description: Messages d
+          description: Messages requeued
 
         '400':
             description: Bad Request
@@ -592,12 +592,11 @@ paths:
         '403':
             description: Forbidden
 
-
-  /: 
+  /statusmessage: 
     post:
       summary: Submit a series of status messages
       description: Allows a Market Participant to submit a series of status messages 
-      operationId: submit
+      operationId: submitStatusMessage
       tags: 
         - Status Messages
       parameters:
@@ -658,7 +657,7 @@ paths:
           description: HTTP Version Not Supported
 
 
-  //config/{recipient-id}:
+  /statusmessage/config/{recipient-id}:
     parameters:
         - $ref: '#/components/parameters/MessageRecipientId'
         - $ref: '#/components/parameters/CommonSignatureHeader'
@@ -776,7 +775,6 @@ paths:
             description: No Content
         '401':
             description: Unauthorised Error            
-
 
 
 
