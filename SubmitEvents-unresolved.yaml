@@ -87,7 +87,7 @@
 #       15/05/2024   DIN-974    Align webhook responses for  and dip-channel
 #       23/04/2024   DIN-1018   Correct validation endpoints and add /validate/IF-009/MPANReconnection
 #       22/05/2024   DIN-1031   Update to Standard Response Body to reflect mandatory null 
-#       28/05/2024   DIN-962    Make MPAN optional on replay/requeue
+#       28/05/2024   DIN-962    Make MPAN optional on replay/
 #       07/06/2024   DIN-988    Remove IF-003-DSDeAppUpdateRM & IF-003-DSDeAppUpdateRM valdation endpoints
 # 1.8   22/03/2024              Support new IR8 release  
 #       22/03/2024   DIN-960    Add validation endpoints 
@@ -510,7 +510,7 @@ paths:
         '401':
             description: Unauthorised Error            
 
-### Message Replay - copied back 1.8.3 definition as 2.1.0 can't contain the enhanced replay/requeue.
+### Message Replay - copied back 1.8.3 definition as 2.1.0 can't contain the enhanced replay/.
 
   /dip-channel/{id}/replay/{recipient-id}:
     post:
@@ -518,7 +518,7 @@ paths:
       description: Allows a Market Participant to replay messages  
       operationId: replayPublication
       tags: 
-          - DIP Channel Replay/Requeue
+          - DIP Channel Replay/
       parameters:
         - $ref: '#/components/parameters/MessageChannel'
         - $ref: '#/components/parameters/MessageRecipientId'
@@ -555,13 +555,13 @@ paths:
         '403':
             description: Forbidden
 
-  /dip-channel/{id}/requeue/{recipient-id}:
+  /dip-channel/{id}//{recipient-id}:
     post:
-      summary: Requeue messages on DIP Channel webhook  
+      summary:  messages on DIP Channel webhook  
       description: Allows a Market Participant to replay messages  
-      operationId: requeuePublication
+      operationId: Publication
       tags: 
-          - DIP Channel Replay/Requeue
+          - DIP Channel Replay/
       parameters:
         - $ref: '#/components/parameters/MessageChannel'
         - $ref: '#/components/parameters/MessageRecipientId'
@@ -579,7 +579,7 @@ paths:
                 
       responses:
         '200':
-          description: Messages requeued
+          description: Messages d
 
         '400':
             description: Bad Request
@@ -6774,20 +6774,20 @@ components:
       schema:
         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-006-DIPParticipantID' 
 
-    RequeueId:
-      name: requeue-id
-      in: query
-      required: false
-      schema:
-        $ref: '#/components/schemas/RequeueId'
+#    RequeueId:
+#      name: requeue-id
+#      in: query
+#      required: false
+#      schema:
+#        $ref: '#/components/schemas/RequeueId'
 
-    ContinuationToken:
-      name: X-Continuation-Token
-      in: header
-      required: false
-      schema:
-        type: string
-        format: uuid
+#    ContinuationToken:
+#      name: X-Continuation-Token
+#      in: header
+#      required: false
+#      schema:
+#        type: string
+#        format: uuid
 
               
     CommonSignatureHeader:
