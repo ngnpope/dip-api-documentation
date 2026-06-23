@@ -5,7 +5,7 @@
 # SubmitEvents API 
 #
 # ----- update notices ---------------------------------------------------------------
-# June for November release
+# June for November release v2.2.0
 # ------------
 # re-introduce reworked APIs for replay/requeue and status message replay/requeue
 #
@@ -72,13 +72,14 @@
 # Ver   Date           Ref.    Description
 #                   ADO / DCAB            
 # ------------------------------------------------------------------------------------
+# 2.2.0 23/06/2025  49300/017   Re-Introduce Status Message replay/requeue 
 # 2.1.0 02/02/2026              Support for June/July release
 #       17/03/2026  51136/      Changes to Replay to support bulk replay
 #       19/02/2025              Minor edits to align example status codes with agreed list
 #       15/04/2025              Rollback changes to support bulk replay and status message replay  
 #       22/06/2026              further changes need rolling back 
 # 2.0.2 16/09/2025  49300/017   Introduce Status Message replay/requeue - need to split out from v2.0.1 into 
-#                               separate release  
+#                               separate release - never released  
 # 2.0.1 16/09/2025              First post go-live release
 #       03/10/2025  CP1067      Introduce IF-051 message     
 #
