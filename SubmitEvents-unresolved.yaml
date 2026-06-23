@@ -5,6 +5,10 @@
 # SubmitEvents API 
 #
 # ----- update notices ---------------------------------------------------------------
+# June for November release v2.2.0
+# ------------
+# re-introduce reworked APIs for replay/requeue and status message replay/requeue
+#
 # February - June 2026 v2.1.0
 # ------------
 # New version for July release
@@ -57,7 +61,7 @@
 # other interfaces and allows new message channels to be added without impact existing interfaces. 
 #
 # outstanding work :-
-# 1. replace swaggerhub domain with DIP domain name - to do
+# 1. replace swaggerhub domain with DIP domain name - complete in v2.1.0
 #
 # none of these items affect the data format
 # 
@@ -68,13 +72,14 @@
 # Ver   Date           Ref.    Description
 #                   ADO / DCAB            
 # ------------------------------------------------------------------------------------
+# 2.2.0 23/06/2025  49300/017   Re-Introduce Status Message replay/requeue 
 # 2.1.0 02/02/2026              Support for June/July release
 #       17/03/2026  51136/      Changes to Replay to support bulk replay
 #       19/02/2025              Minor edits to align example status codes with agreed list
 #       15/04/2025              Rollback changes to support bulk replay and status message replay  
 #       22/06/2026              further changes need rolling back 
 # 2.0.2 16/09/2025  49300/017   Introduce Status Message replay/requeue - need to split out from v2.0.1 into 
-#                               separate release  
+#                               separate release - never released  
 # 2.0.1 16/09/2025              First post go-live release
 #       03/10/2025  CP1067      Introduce IF-051 message     
 #
@@ -510,7 +515,7 @@ paths:
         '401':
             description: Unauthorised Error            
 
-### Message Replay - copied back 1.8.3 definition as 2.1.0 can't contain the enhanced replay/.
+### Message Replay - 2.2.0 version supports enhanced replay.
 
   /dip-channel/{id}/replay/{recipient-id}:
     post:
@@ -526,6 +531,7 @@ paths:
         - $ref: '#/components/parameters/CommonSignatureDateHeader'
         - $ref: '#/components/parameters/CommonSHA256Header'
         - $ref: '#/components/parameters/CommonSignatureCertifcateHeader'
+        - $ref: '#/components/parameters/ContinuationToken'
 
       requestBody:
         required: true
@@ -549,11 +555,30 @@ paths:
               application/json:
                 schema:
                     $ref: '#/components/schemas/StandardResponse'
+
+#       23/06/2026  49300/017
+# Add reason codes to notify when there is more data to retrieve
+
+        '206':
+          description: Replayed Messages - more data
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DIPMessageEgressArray'
+          headers:
+              X-Continuation-Token:
+                required: false
+                schema:
+                  type: string
+                  format: uuid
             
         '401':
             description: Unauthorised Error            
         '403':
             description: Forbidden
+            
+#       23/06/2026  49300/017
+# Updated reason codes in order to support bulk requeue
 
   /dip-channel/{id}/requeue/{recipient-id}:
     post:
@@ -577,8 +602,11 @@ paths:
             schema:
                 $ref: '#/components/schemas/MessageRequest'
                 
+#       23/06/2026  49300/017
+# Update reason codes (add 202,429; drop 200) in order to support bulk requeue
+
       responses:
-        '200':
+        '202':
           description: Messages requeued
 
         '400':
@@ -591,6 +619,55 @@ paths:
             description: Unauthorised Error            
         '403':
             description: Forbidden
+        '429':
+            description: Too Many Requests
+
+
+#       23/06/2026  49300/017
+#   Add Requeue Status endpoint so DIP users can determine if there are o/s requests for requeue
+#   hence provide rationale why a requeue request may fail with a 429
+            
+  /dip-channel/{id}/requeueStatus/{recipient-id}:
+    get:
+      summary: Requeue messages on DIP Channel webhook  
+      description: Allows a Market Participant to replay messages  
+      operationId: requeueStatus
+      tags: 
+          - DIP Channel Replay/Requeue
+      parameters:
+        - $ref: '#/components/parameters/MessageChannel'
+        - $ref: '#/components/parameters/MessageRecipientId'
+        - $ref: '#/components/parameters/RequeueId'
+        - $ref: '#/components/parameters/CommonSignatureHeader'
+        - $ref: '#/components/parameters/CommonSignatureDateHeader'
+        - $ref: '#/components/parameters/CommonSHA256Header'
+        - $ref: '#/components/parameters/CommonSignatureCertifcateHeader'
+
+      responses:
+        '200':
+          description: Requeue Information
+          content: 
+            application/json:
+              schema:
+                    $ref: '#/components/schemas/RequeueStatus'
+              
+
+        '204':
+          description: No Content
+
+        '400':
+            description: Bad Request
+            content: 
+              application/json:
+                schema:
+                    $ref: '#/components/schemas/StandardResponse'
+        '401':
+            description: Unauthorised Error            
+        '403':
+            description: Forbidden
+        '429':
+            description: Too Many Requests
+
 
   /statusmessage: 
     post:
@@ -776,6 +853,162 @@ paths:
         '401':
             description: Unauthorised Error            
 
+## Status Message replay new in verison 2.0.1
+  /statusmessage/replay/{recipient-id}:
+    post:
+      summary: Replay Status Messages  
+      description: Allows a Market Participant to replay status messages  
+      operationId: replayStatusMessage
+      tags: 
+          - Status Message Replay/Requeue
+      parameters:
+        - $ref: '#/components/parameters/MessageRecipientId'
+        - $ref: '#/components/parameters/CommonSignatureHeader'
+        - $ref: '#/components/parameters/CommonSignatureDateHeader'
+        - $ref: '#/components/parameters/CommonSHA256Header'
+        - $ref: '#/components/parameters/CommonSignatureCertifcateHeader'
+        - $ref: '#/components/parameters/ContinuationToken'
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                $ref: '#/components/schemas/StatusMessageRequest'
+                
+
+      responses:
+        '200':
+          description: Replayed Status Messages 
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandardResponseArray'
+
+        '206':
+          description: Replayed Status Message - more data
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandardResponseArray'
+          headers:
+              X-Continuation-Token:
+                required: false
+                schema:
+                  type: string
+                  format: uuid
+
+        '400':
+            description: Bad Request
+            content: 
+              application/json:
+                schema:
+                    $ref: '#/components/schemas/StandardResponse'
+            
+        '401':
+            description: Unauthorised Error            
+        '403':
+            description: Forbidden
+    parameters:
+        - $ref: '#/components/parameters/MessageRecipientId'
+        - $ref: '#/components/parameters/CommonSignatureHeader'
+        - $ref: '#/components/parameters/CommonSignatureDateHeader'
+        - $ref: '#/components/parameters/CommonSHA256Header'
+        - $ref: '#/components/parameters/CommonSignatureCertifcateHeader'
+
+## Status Message replay new in verison 2.2.0
+  /statusmessage/requeue/{recipient-id}:
+    post:
+      summary: Requeue Status Messages  
+      description: Allows a Market Participant to requeue status messages  
+      operationId: requeueStatusMessage
+      tags: 
+          - Status Message Replay/Requeue
+      parameters:
+        - $ref: '#/components/parameters/MessageRecipientId'
+        - $ref: '#/components/parameters/CommonSignatureHeader'
+        - $ref: '#/components/parameters/CommonSignatureDateHeader'
+        - $ref: '#/components/parameters/CommonSHA256Header'
+        - $ref: '#/components/parameters/CommonSignatureCertifcateHeader'
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                $ref: '#/components/schemas/StatusMessageRequest'
+                
+
+      responses:
+        '202':
+          description: Status Messages Requeued
+          content: 
+              application/json:
+                schema:
+                    $ref: '#/components/schemas/RequeueId'
+
+
+        '400':
+            description: Bad Request
+            content: 
+              application/json:
+                schema:
+                    $ref: '#/components/schemas/StandardResponse'
+            
+        '401':
+            description: Unauthorised Error            
+        '403':
+            description: Forbidden
+        '429':
+            description: Too Many Requests
+
+    parameters:
+        - $ref: '#/components/parameters/MessageRecipientId'
+        - $ref: '#/components/parameters/CommonSignatureHeader'
+        - $ref: '#/components/parameters/CommonSignatureDateHeader'
+        - $ref: '#/components/parameters/CommonSHA256Header'
+        - $ref: '#/components/parameters/CommonSignatureCertifcateHeader'
+
+  /statusmessage/requeueStatus/{recipient-id}:
+    get:
+      summary: Requeue messages on DIP Channel webhook  
+      description: Allows a Market Participant to replay messages  
+      operationId: requeueStatusMessageStatus
+      tags: 
+          - Status Message Replay/Requeue
+      parameters:
+        - $ref: '#/components/parameters/MessageChannel'
+        - $ref: '#/components/parameters/MessageRecipientId'
+        - $ref: '#/components/parameters/RequeueId'
+        - $ref: '#/components/parameters/CommonSignatureHeader'
+        - $ref: '#/components/parameters/CommonSignatureDateHeader'
+        - $ref: '#/components/parameters/CommonSHA256Header'
+        - $ref: '#/components/parameters/CommonSignatureCertifcateHeader'
+
+      responses:
+        '200':
+          description: Requeue Information
+          content: 
+            application/json:
+              schema:
+                    $ref: '#/components/schemas/RequeueStatus'
+              
+
+        '204':
+          description: No Content
+
+        '400':
+            description: Bad Request
+            content: 
+              application/json:
+                schema:
+                    $ref: '#/components/schemas/StandardResponse'
+        '401':
+            description: Unauthorised Error            
+        '403':
+            description: Forbidden
+        '429':
+            description: Too Many Requests
 
 
 #####################
@@ -6772,20 +7005,20 @@ components:
       schema:
         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-006-DIPParticipantID' 
 
-#    RequeueId:
-#      name: requeue-id
-#      in: query
-#      required: false
-#      schema:
-#        $ref: '#/components/schemas/RequeueId'
+    RequeueId:
+      name: requeue-id
+      in: query
+      required: false
+      schema:
+        $ref: '#/components/schemas/RequeueId'
 
-#    ContinuationToken:
-#      name: X-Continuation-Token
-#      in: header
-#      required: false
-#      schema:
-#        type: string
-#        format: uuid
+    ContinuationToken:
+      name: X-Continuation-Token
+      in: header
+      required: false
+      schema:
+        type: string
+        format: uuid
 
               
     CommonSignatureHeader:
@@ -7041,23 +7274,22 @@ components:
             $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-992N-Schema-Version' 
         
 
-#    StatusMessageRequest:
-#      type: object
-#      required:
-#          - datetimeFrom
-#          - datetimeTo
-
-#     properties:
-#       datetimeFrom:
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
-#       datetimeTo:
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
-#       transactionID:
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-014N-DIPTransactionID' 
-#       senderUniqueReference : 
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-995N-SenderUniqueReference'
-#       correlationID:
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-011N-CorrelationID'
+    StatusMessageRequest:
+      type: object
+      required:
+          - datetimeFrom
+          - datetimeTo
+      properties:
+        datetimeFrom:
+          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
+        datetimeTo:
+          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
+        transactionID:
+          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-014N-DIPTransactionID' 
+        senderUniqueReference : 
+          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-995N-SenderUniqueReference'
+        correlationID:
+          $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-011N-CorrelationID'
 
 
 
@@ -7121,35 +7353,35 @@ components:
         - serviceTicketURL
 
 
-#       16/09/2025  49300/017 
+##       23/06/2026  49300/017 
 
-#    RequeueStatus:
-#      type: object
-#      properties:
-#          percentComplete: 
-#              description: Percentage complete
-#              type: number
-#              example: 50
-#          totalTransactions:
-#              description: Total number of outstanding transactions 
-#              type: number
-#              example: 10000
-#          processedTransactions:
-#            description: Total number of processed transactions 
-#            type: number
-#            example: 5000
-#          status : 
-#            description: Requeue Status
-#            type: string
-#            enum: [Processing,Completed,Failed]
-#            example: Processing
+    RequeueStatus:
+      type: object
+      properties:
+          percentComplete: 
+              description: Percentage complete
+              type: number
+              example: 50
+          totalTransactions:
+              description: Total number of outstanding transactions 
+              type: number
+              example: 10000
+          processedTransactions:
+            description: Total number of processed transactions 
+            type: number
+            example: 5000
+          status : 
+            description: Requeue Status
+            type: string
+            enum: [Processing,Completed,Failed]
+            example: Processing
 
-#    RequeueId:
-#            description: Requeue Id
-#            type: string
-#            minLength : 1
-#            maxLength : 200
-#            example: '2199456789-20222313-12345687a1234567a'            
+    RequeueId:
+            description: Requeue Id
+            type: string
+            minLength : 1
+            maxLength : 200
+            example: '2199456789-20222313-12345687a1234567a'            
 
 
 ## End ##
