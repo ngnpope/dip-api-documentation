@@ -7273,23 +7273,23 @@ components:
             $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-992N-Schema-Version' 
         
 
-#    StatusMessageRequest:
-#      type: object
-#      required:
-#          - datetimeFrom
-#          - datetimeTo
+    StatusMessageRequest:
+      type: object
+      required:
+          - datetimeFrom
+          - datetimeTo
 
-#     properties:
-#       datetimeFrom:
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
-#       datetimeTo:
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
-#       transactionID:
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-014N-DIPTransactionID' 
-#       senderUniqueReference : 
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-995N-SenderUniqueReference'
-#       correlationID:
-#         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-011N-CorrelationID'
+     properties:
+       datetimeFrom:
+         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
+       datetimeTo:
+         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-003-DateTime'
+       transactionID:
+         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-014N-DIPTransactionID' 
+       senderUniqueReference : 
+         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-995N-SenderUniqueReference'
+       correlationID:
+         $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataTypes-unresolved.yaml#/components/schemas/DT-011N-CorrelationID'
 
 
 
