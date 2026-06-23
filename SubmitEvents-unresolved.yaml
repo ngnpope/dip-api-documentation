@@ -498,7 +498,7 @@ paths:
             
     delete:
       summary: Delete existing Publication configuration 
-      description: Delete an exisiting webhook for PUB-001 publication
+      description: Delete an exisiting webhook for a publication
       tags:
           - DIP Channel Publication Configuration 
       parameters:
@@ -520,7 +520,7 @@ paths:
   /dip-channel/{id}/replay/{recipient-id}:
     post:
       summary: Replay messages from a DIP Channel Publication  
-      description: Allows a Market Participant to replay messages  
+      description: Allows a Market Participant to replay messages messages returned in the API call (cf. requeue)
       operationId: replayPublication
       tags: 
           - DIP Channel Replay/Requeue
@@ -583,7 +583,8 @@ paths:
   /dip-channel/{id}/requeue/{recipient-id}:
     post:
       summary: Requeue messages on DIP Channel webhook  
-      description: Allows a Market Participant to replay messages  
+      description: Allows a Market Participant to requeue messages on the corresponding DIP Id webhook 
+        - reason codes updated for version 2.2.0
       operationId: requeuePublication
       tags: 
           - DIP Channel Replay/Requeue
@@ -629,8 +630,8 @@ paths:
             
   /dip-channel/{id}/requeueStatus/{recipient-id}:
     get:
-      summary: Requeue messages on DIP Channel webhook  
-      description: Allows a Market Participant to replay messages  
+      summary: Reports on the status of previously submitted requeue requests
+      description: Reports on the status of previously submitted requeue requests, participants can only submit a new request when the current request completes
       operationId: requeueStatus
       tags: 
           - DIP Channel Replay/Requeue
