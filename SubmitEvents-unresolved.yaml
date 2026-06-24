@@ -570,7 +570,6 @@ paths:
                 required: false
                 schema:
                   type: string
-                  format: uuid
             
         '401':
             description: Unauthorised Error            
@@ -897,7 +896,6 @@ paths:
                 required: false
                 schema:
                   type: string
-                  format: uuid
 
         '400':
             description: Bad Request
@@ -7019,7 +7017,6 @@ components:
       required: false
       schema:
         type: string
-        format: uuid
 
               
     CommonSignatureHeader:
