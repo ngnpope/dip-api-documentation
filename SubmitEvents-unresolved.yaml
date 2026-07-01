@@ -72,7 +72,11 @@
 # Ver   Date           Ref.    Description
 #                   ADO / DCAB            
 # ------------------------------------------------------------------------------------
-# 2.2.0 23/06/2025  49300/017   Re-Introduce Status Message replay/requeue 
+# 2.2.0 23/06/2026  74973/019   Re-Introduce Status Message replay/requeue 
+#                   74972/018   Bulk Message requeue 
+#                   74971/017   Bulk Message replay
+#       01/07/2026  73686/027   Message Delivery Status API – delivery status interrogation by SUR  
+#                    
 # 2.1.0 02/02/2026              Support for June/July release
 #       17/03/2026  51136/      Changes to Replay to support bulk replay
 #       19/02/2025              Minor edits to align example status codes with agreed list
@@ -1007,6 +1011,59 @@ paths:
             description: Forbidden
         '429':
             description: Too Many Requests
+
+#       01/07/2026  73686/027
+@@#   Add delivery status API so DIP users can establish the delivery status of messages 
+            
+  /dip-channel/{id}/deliveryStatus/{recipient-id}/{message-id}:
+
+or
+
+  /deliveryStatus/{recipient-id}/{message-id}:
+
+
+  
+    get:
+      summary: Reports on the status of previously submitted requeue requests
+      description: Reports on the status of previously submitted requeue requests, participants can only submit a new request when the current request completes
+      operationId: requeueStatus
+      tags: 
+          - DIP Channel Replay/Requeue
+      parameters:
+        - $ref: '#/components/parameters/MessageChannel'
+        - $ref: '#/components/parameters/MessageRecipientId'
+        - $ref: '#/components/parameters/RequeueId'
+        - $ref: '#/components/parameters/CommonSignatureHeader'
+        - $ref: '#/components/parameters/CommonSignatureDateHeader'
+        - $ref: '#/components/parameters/CommonSHA256Header'
+        - $ref: '#/components/parameters/CommonSignatureCertifcateHeader'
+
+      responses:
+        '200':
+          description: Requeue Information
+          content: 
+            application/json:
+              schema:
+                    $ref: '#/components/schemas/RequeueStatus'
+              
+
+        '204':
+          description: No Content
+
+        '400':
+            description: Bad Request
+            content: 
+              application/json:
+                schema:
+                    $ref: '#/components/schemas/StandardResponse'
+        '401':
+            description: Unauthorised Error            
+        '403':
+            description: Forbidden
+        '429':
+            description: Too Many Requests
+
+
 
 
 #####################
