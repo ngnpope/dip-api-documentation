@@ -161,7 +161,7 @@ info:
   version: 2.1.0
   title: DIP - Send Messages & Receive Publications
   description: 
-    Latest release 2.1.0 <br> DIP APIs for sending & recieving MHHS TOM messages and reports. <br>Supported interfaces -<br><br>
+    Latest release 2.2.0 <br> DIP APIs for sending & recieving MHHS TOM messages and reports. <br>Supported interfaces -<br><br>
      -           Channel-001    Notification of Change of Supplier **<br>
      -           Channel-002    Registration Update to Supplier (COS Gain) **<br>
      -           Channel-003    Notification of Migration and De-Appointment (Migration)<br>
@@ -1035,11 +1035,11 @@ paths:
 
       responses:
         '200':
-          description: Requeue Information
+          description: DIP Journalling Information
           content: 
             application/json:
               schema:
-                    $ref: '#/components/schemas/RequeueStatus'
+                    $ref: '#/components/schemas/DIPJournalRecord'
               
 
         '204':
