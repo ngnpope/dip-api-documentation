@@ -54,11 +54,11 @@ components:
             false        
         properties:
              settlementDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-305-Settlement-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-305-Settlement-Date'
              settlementCode:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-160-Settlement-Code'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-160-Settlement-Code'
              runNumber:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-161-Run-Number'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-161-Run-Number'
         required:
             - settlementDate
             - settlementCode
@@ -71,17 +71,17 @@ components:
             false        
         properties:
              connectionTypeIndicator:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-015-Connection-Type-Indicator'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-015-Connection-Type-Indicator'
              measurementQuantityID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-052-Measurement-Quantity-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-052-Measurement-Quantity-ID'
              marketSegmentIndicator:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-050-Market-Segment-Indicator'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-050-Market-Segment-Indicator'
 #             domesticPremiseIndicator:
-#                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-030-Domestic-Premise-Indicator'
+#                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-030-Domestic-Premise-Indicator'
              consumptionComponentClassID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-300-Consumption-Component-Class-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-300-Consumption-Component-Class-ID'
              consumptionComponentIndicator:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-080-Consumption-Component-Indicator'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-080-Consumption-Component-Indicator'
         required:
             - connectionTypeIndicator
             - measurementQuantityID
@@ -97,7 +97,7 @@ components:
             false        
         properties:
              embeddedLDSOID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-483-Embedded-LDSO-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-483-Embedded-LDSO-ID'
         required:
             - embeddedLDSOID
             
@@ -106,7 +106,7 @@ components:
         type: object
         properties:
              settlementRunExecutionDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-159-Settlement-Run-Execution-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-159-Settlement-Run-Execution-Date'
         required:
             - settlementRunExecutionDate
 
@@ -118,7 +118,7 @@ components:
             false        
         properties:
              supplierMPID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-495-Supplier-MPID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-495-Supplier-MPID'
               # R027  
         required:
             - supplierMPID
@@ -130,11 +130,11 @@ components:
             false        
         properties:
              DUoSTariffID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-345-DUoS-Tariff-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-345-DUoS-Tariff-ID'
              DUoSTariffEnergyDirection:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-485-DUoS-Tariff-Energy-Direction'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-485-DUoS-Tariff-Energy-Direction'
              DUoSTariffDomesticPremiseIndicator:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-486-DUoS-Tariff-Domestic-Premise-Indicator'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-486-DUoS-Tariff-Domestic-Premise-Indicator'
         required:
             - DUoSTariffID
             - DUoSTariffEnergyDirection
@@ -148,15 +148,15 @@ components:
             false        
         properties:
              settlementPeriod:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
              settlementPeriodDuration:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-081-Settlement-Period-Duration' #DIN-1020
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-081-Settlement-Period-Duration' #DIN-1020
              totalUncorrectedVolume:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-347-Total-Uncorrected-Volume'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-347-Total-Uncorrected-Volume'
              totalNumberEnergisedMPANs:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-487-Total-Number-Energised-MPANs'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-487-Total-Number-Energised-MPANs'
              totalNumberDeEnergisedMPANs:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-488-Total-Number-De-Energised-MPANs'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-488-Total-Number-De-Energised-MPANs'
         required:
              - settlementPeriod
              - settlementPeriodDuration
@@ -172,15 +172,15 @@ components:
             false        
         properties:
              settlementPeriod:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
              settlementPeriodDuration:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-081-Settlement-Period-Duration' #DIN-1020
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-081-Settlement-Period-Duration' #DIN-1020
              embeddedTotalUncorrectedVolume:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-491-Embedded-Total-Uncorrected-Volume'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-491-Embedded-Total-Uncorrected-Volume'
              totalNumberEnergisedMPANs:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-487-Total-Number-Energised-MPANs'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-487-Total-Number-Energised-MPANs'
              totalNumberDeEnergisedMPANs:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-488-Total-Number-De-Energised-MPANs'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-488-Total-Number-De-Energised-MPANs'
         required:
              - settlementPeriod
              - settlementPeriodDuration
@@ -195,7 +195,7 @@ components:
             false        
         properties:
              GSPGroupID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-037-GSP-Group-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-037-GSP-Group-ID'
         required:
               - GSPGroupID
 
@@ -207,7 +207,7 @@ components:
             false        
         properties:
              supplierMPID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-495-Supplier-MPID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-495-Supplier-MPID'
         required:
             - supplierMPID
             
@@ -218,9 +218,9 @@ components:
             false        
         properties:
              BMUnitID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-302-BM-Unit-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-302-BM-Unit-ID'
              defaultBMUnitFlag:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-357-Default-BM-Unit-Flag'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-357-Default-BM-Unit-Flag'
         required:
              - BMUnitID
              - defaultBMUnitFlag
@@ -232,15 +232,15 @@ components:
             false        
         properties:
              consumptionComponentClassID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-300-Consumption-Component-Class-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-300-Consumption-Component-Class-ID'
              GSPGroupCorrectionScalingWeight:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-325-GSP-Group-Correction-Scaling-Weight'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-325-GSP-Group-Correction-Scaling-Weight'
              connectionTypeIndicator:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-015-Connection-Type-Indicator'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-015-Connection-Type-Indicator'
              marketSegmentIndicator:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-050-Market-Segment-Indicator'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-050-Market-Segment-Indicator'
              consumptionComponentIndicator:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-080-Consumption-Component-Indicator'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-080-Consumption-Component-Indicator'
         required:
              - consumptionComponentClassID
              - GSPGroupCorrectionScalingWeight
@@ -255,17 +255,17 @@ components:
             false        
         properties:
              settlementDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-305-Settlement-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-305-Settlement-Date'
              settlementPeriod:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
              uncorrectedBMUnitPeriodLevelConsumption:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-359-Uncorrected-BM-Unit-Period-Level-Consumption'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-359-Uncorrected-BM-Unit-Period-Level-Consumption'
              uncorrectedBMUnitPeriodLevelConsumptionLosses:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-360-Uncorrected-BM-Unit-Period-Level-Consumption-Losses'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-360-Uncorrected-BM-Unit-Period-Level-Consumption-Losses'
              correctedComponentConsumption:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-362-Corrected-Component-Consumption'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-362-Corrected-Component-Consumption'
              correctedComponentLosses:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-324-Corrected-Component-Losses'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-324-Corrected-Component-Losses'
         required:
             - settlementDate
             - settlementPeriod
@@ -281,13 +281,13 @@ components:
             false        
         properties:
              dailyBMUnitPeriodLevelConsumption:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-363-Daily-BM-Unit-Period-Level-Consumption'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-363-Daily-BM-Unit-Period-Level-Consumption'
              dailyBMUnitPeriodLevelConsumptionLosses:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-364-Daily-BM-Unit-Period-Level-Consumption-Losses'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-364-Daily-BM-Unit-Period-Level-Consumption-Losses'
              dailyCorrectedComponent:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-365-Daily-Corrected-Component'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-365-Daily-Corrected-Component'
              dailyCorrectedComponentLosses:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-366-Daily-Corrected-Component-Losses'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-366-Daily-Corrected-Component-Losses'
         required:
              - dailyBMUnitPeriodLevelConsumption
              - dailyBMUnitPeriodLevelConsumptionLosses
@@ -302,9 +302,9 @@ components:
             false        
         properties:
              CCCID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-303-CCC-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-303-CCC-ID'
              GSPGroupCorrectionScalingWeight:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-325-GSP-Group-Correction-Scaling-Weight'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-325-GSP-Group-Correction-Scaling-Weight'
         required:
              - CCCID
              - GSPGroupCorrectionScalingWeight
@@ -316,11 +316,11 @@ components:
             false        
         properties:
              dailyUncorrectedPeriodBMUnitTotalAllocatedVolume:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-367-Daily-Uncorrected-Period-BM-Unit-Total-Allocated-Volume'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-367-Daily-Uncorrected-Period-BM-Unit-Total-Allocated-Volume'
              dailyPeriodBMUnitTotalAllocatedVolume:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-368-Daily-Period-BM-Unit-Total-Allocated-Volume'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-368-Daily-Period-BM-Unit-Total-Allocated-Volume'
              dailyBMUnitMSIDCount:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-492-Daily-BM-Unit-MSID-Count'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-492-Daily-BM-Unit-MSID-Count'
         required:
             - dailyUncorrectedPeriodBMUnitTotalAllocatedVolume
             - dailyPeriodBMUnitTotalAllocatedVolume
@@ -334,11 +334,11 @@ components:
             false        
         properties:
              SettlementPeriod:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
              BMUnitAllocatedDemandDisconnectionVolume:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-341-BM-Unit-Allocated-Demand-Disconnection-Volume'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-341-BM-Unit-Allocated-Demand-Disconnection-Volume'
              BMUnitAllocatedDemandDisconnectionVolumeLosses:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-339-BM-Unit-Allocated-Demand-Disconnection-Volume-Losses'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-339-BM-Unit-Allocated-Demand-Disconnection-Volume-Losses'
         required:
             - SettlementPeriod
             - BMUnitAllocatedDemandDisconnectionVolume
@@ -351,9 +351,9 @@ components:
             false        
         properties:
              dailyBMUnitAllocatedDemandDisconnectionVolume:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-369-Daily-BM-Unit-Allocated-Demand-Disconnection-Volume'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-369-Daily-BM-Unit-Allocated-Demand-Disconnection-Volume'
              dailyBMUnitAllocatedDemandDisconnectionVolumeLosses:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-370-Daily-BM-Unit-Allocated-Demand-Disconnection-Volume-Losses'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-370-Daily-BM-Unit-Allocated-Demand-Disconnection-Volume-Losses'
         required:
           - dailyBMUnitAllocatedDemandDisconnectionVolume
           - dailyBMUnitAllocatedDemandDisconnectionVolumeLosses
@@ -366,11 +366,11 @@ components:
             false        
         properties:
              settlementPeriodID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
              groupCorrectionFactorImport:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-322-Group-Correction-Factor-Import'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-322-Group-Correction-Factor-Import'
              groupCorrectionFactorExport:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-323-Group-Correction-Factor-Export'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-323-Group-Correction-Factor-Export'
         required:
              - settlementPeriodID
              - groupCorrectionFactorImport
@@ -383,7 +383,7 @@ components:
             false        
         properties:
              dailySupplierDeemedTakeforSettlementDay:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-373-Daily-Supplier-Deemed-Take'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-373-Daily-Supplier-Deemed-Take'
         required:
             - dailySupplierDeemedTakeforSettlementDay
             
@@ -394,9 +394,9 @@ components:
             false        
         properties:
              SettlementPeriod:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
              supplierDeemedTake:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-327-Supplier-Deemed-Take' 
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-327-Supplier-Deemed-Take' 
         required:
             - SettlementPeriod
             - supplierDeemedTake
@@ -408,7 +408,7 @@ components:
             false        
         properties:
              distributorID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-029-Distributor-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-029-Distributor-ID'
         required:
             - distributorID
 
@@ -421,9 +421,9 @@ components:
             false        
         properties:
              LLFID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-301-LLF-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-301-LLF-ID'
              LLFStatus:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-493-LLF-Status'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-493-LLF-Status'
         required:
             - LLFID
             - LLFStatus
@@ -435,7 +435,7 @@ components:
             false        
         properties:
              settlementDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-305-Settlement-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-305-Settlement-Date'
         required:
               - settlementDate
             
@@ -444,9 +444,9 @@ components:
 #        type: object
 #        properties:
 #             settlementPeriodId:
-#                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-307-Settlement-Period-ID'
+#                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-307-Settlement-Period-ID'
 #             lineLossFactor:
-#                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-039-Line-Loss-Factor-Class'
+#                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-039-Line-Loss-Factor-Class'
 #        required:
 #            - settlementPeriodId
 #            - lineLossFactor
@@ -458,7 +458,7 @@ components:
             false        
         properties:
              BMUnitID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-302-BM-Unit-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-302-BM-Unit-ID'
         required:
             - BMUnitID
           
@@ -470,13 +470,13 @@ components:
             false        
         properties:
              settlementPeriod:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
              MSIDCount:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-374-MSID-Count'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-374-MSID-Count'
              uncorrectedBMUnitPeriodLevelConsumption:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-359-Uncorrected-BM-Unit-Period-Level-Consumption'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-359-Uncorrected-BM-Unit-Period-Level-Consumption'
              uncorrectedBMUnitPeriodLevelConsumptionLosses:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-360-Uncorrected-BM-Unit-Period-Level-Consumption-Losses'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-360-Uncorrected-BM-Unit-Period-Level-Consumption-Losses'
         required:
           - settlementPeriod
           - MSIDCount
@@ -490,9 +490,9 @@ components:
             false        
         properties:
              dailyUncorrectedBMUnitPeriodLevelConsumption:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-375-Daily-Uncorrected-BM-Unit-Period-Level-Consumption'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-375-Daily-Uncorrected-BM-Unit-Period-Level-Consumption'
              dailyBMUnitPeriodLevelConsumptionLosses:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-364-Daily-BM-Unit-Period-Level-Consumption-Losses'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-364-Daily-BM-Unit-Period-Level-Consumption-Losses'
         required:
           - dailyUncorrectedBMUnitPeriodLevelConsumption
           - dailyBMUnitPeriodLevelConsumptionLosses
@@ -504,9 +504,9 @@ components:
             false        
         properties:
             BMUnitID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-302-BM-Unit-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-302-BM-Unit-ID'
             detailsOfDefaultDataUsed:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-380-Details-Of-Default-Data-Used'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-380-Details-Of-Default-Data-Used'
         required:
             - BMUnitID
             - detailsOfDefaultDataUsed
@@ -518,7 +518,7 @@ components:
             false        
         properties:
              detailsofDefaultLLFDataUsed:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-494-Details-of-Default-LLF-Data-Used'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-494-Details-of-Default-LLF-Data-Used'
         required:
             - detailsofDefaultLLFDataUsed
 
@@ -530,11 +530,11 @@ components:
             false        
         properties:
               demandDisconnectionEventID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-332-Demand-Disconnection-Event-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-332-Demand-Disconnection-Event-ID'
               DDEStartDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-334-DDE-Start-Datetime'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-334-DDE-Start-Datetime'
               DDEEndDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-335-DDE-End-Datetime'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-335-DDE-End-Datetime'
         required:
           - demandDisconnectionEventID
           - DDEStartDate
@@ -548,15 +548,15 @@ components:
             false        
         properties:
              MPANCore:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-063-MPAN-Core'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-063-MPAN-Core'
              measurementQuantityID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-052-Measurement-Quantity-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-052-Measurement-Quantity-ID'
              settlementPeriodID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-307-Settlement-Period-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-307-Settlement-Period-ID'
              periodMeteringSystemMeteredData:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-432-Period-Metering-System-Metered-Data'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-432-Period-Metering-System-Metered-Data'
              settlementPeriodQualityIndicator:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-083-Settlement-Period-Quality-Indicator'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-083-Settlement-Period-Quality-Indicator'
         required:
              - MPANCore
              - measurementQuantityID
@@ -569,7 +569,7 @@ components:
         type: object
         properties:
              settlementPeriodDuration:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-081-Settlement-Period-Duration' # DIN-1020
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-081-Settlement-Period-Duration' # DIN-1020
         required:
              - settlementPeriodDuration
           
@@ -578,9 +578,9 @@ components:
         type: object
         properties:
              dailyTotalVolumeBasedOnActualData:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-489-Daily-Total-Volume-Based-On-Actual-Data'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-489-Daily-Total-Volume-Based-On-Actual-Data'
              dailyTotalVolumeBasedOnEstimatedData:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-490-Daily-Total-Volume-Based-On-Estimated-Data'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-490-Daily-Total-Volume-Based-On-Estimated-Data'
         required:
           - dailyTotalVolumeBasedOnActualData
           - dailyTotalVolumeBasedOnEstimatedData
@@ -590,17 +590,17 @@ components:
         type: object
         properties:
               consumptionComponentClassID:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-300-Consumption-Component-Class-ID'   
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-300-Consumption-Component-Class-ID'   
               settlementPeriodID:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-496-Settlement-Period'
               supplierAdvancedDemandDisconnectionVolume:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-336-Supplier-Advanced-Demand-Disconnection-Volume'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-336-Supplier-Advanced-Demand-Disconnection-Volume'
               supplierAdvancedDemandDisconnectionVolumeLosses:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-337-Supplier-Advanced-Demand-Disconnection-Volume-Losses'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-337-Supplier-Advanced-Demand-Disconnection-Volume-Losses'
               BMUnitDemandDisconnectionVolume:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-338-BM-Unit-Demand-Disconnection-Volume'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-338-BM-Unit-Demand-Disconnection-Volume'
               BMUnitDemandDisconnectionVolumeLosses:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-339-BM-Unit-Allocated-Demand-Disconnection-Volume-Losses'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-339-BM-Unit-Allocated-Demand-Disconnection-Volume-Losses'
         required:
           - consumptionComponentClassID
           - settlementPeriodID
@@ -617,13 +617,13 @@ components:
             false        
         properties:
               dailyAdvancedDemandDisconnectionVolume:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-376-Daily-Advanced-Demand-Disconnection-Volume'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-376-Daily-Advanced-Demand-Disconnection-Volume'
               dailyAdvancedDemandDisconnectionVolumeLosses:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-377-Daily-Advanced-Demand-Disconnection-Volume-Losses'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-377-Daily-Advanced-Demand-Disconnection-Volume-Losses'
               dailyBMUnitDemandDisconnectionVolume:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-378-Daily-BMU-Demand-Disconnection-Volume'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-378-Daily-BMU-Demand-Disconnection-Volume'
               dailyBMUnitDemandDisconnectionVolumeLosses:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-379-Daily-BMU-Demand-Disconnection-Volume-Losses'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-379-Daily-BMU-Demand-Disconnection-Volume-Losses'
         required:
           - dailyAdvancedDemandDisconnectionVolume
           - dailyAdvancedDemandDisconnectionVolumeLosses
@@ -894,17 +894,17 @@ components:
         properties:
           R009:        
             #    Supplier  ID
-            $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/ECS-CommonBlocks-unresolved.yaml#/components/schemas/R009'
+            $ref: 'ECS-CommonBlocks-unresolved.yaml#/components/schemas/R009'
 
           REP004-R026:
             type: array
             items:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/ECS-CommonBlocks-unresolved.yaml#/components/schemas/R026'
+                $ref: 'ECS-CommonBlocks-unresolved.yaml#/components/schemas/R026'
           REP004-R025: 
             type: array
             items:
               #   Daily Supplier Deemed Take
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/ECS-CommonBlocks-unresolved.yaml#/components/schemas/R025'
+                $ref: 'ECS-CommonBlocks-unresolved.yaml#/components/schemas/R025'
 
               
 # Blocks for REP006
@@ -1031,63 +1031,63 @@ components:
             false        
         properties:
             distributorID:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-029-Distributor-ID'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-029-Distributor-ID'
             distributorRegisteredName:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-520-Distributor-Registered-Name'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-520-Distributor-Registered-Name'
             distributorCompanyRegistrationNumber:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-521-Distributor-Company-Registration-Number'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-521-Distributor-Company-Registration-Number'
             distributorRegisteredAddressLine1:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-522-Distributor-Registered-Address-Line-1'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-522-Distributor-Registered-Address-Line-1'
             distributorRegisteredAddressLine2:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-523-Distributor-Registered-Address-Line-2'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-523-Distributor-Registered-Address-Line-2'
             distributorRegisteredAddressLine3:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-524-Distributor-Registered-Address-Line-3'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-524-Distributor-Registered-Address-Line-3'
             distributorRegisteredAddressLine4:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-525-Distributor-Registered-Address-Line-4'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-525-Distributor-Registered-Address-Line-4'
             distributorRegisteredAddressLine5:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-526-Distributor-Registered-Address-Line-5'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-526-Distributor-Registered-Address-Line-5'
             distributorRegisteredAddressLine6:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-527-Distributor-Registered-Address-Line-6'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-527-Distributor-Registered-Address-Line-6'
             distributorRegisteredAddressLine7:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-528-Distributor-Registered-Address-Line-7'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-528-Distributor-Registered-Address-Line-7'
             distributorRegisteredAddressLine8:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-529-Distributor-Registered-Address-Line-8'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-529-Distributor-Registered-Address-Line-8'
             distributorRegisteredAddressLine9:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-530-Distributor-Registered-Address-Line-9'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-530-Distributor-Registered-Address-Line-9'
             distributorRegisteredAddressPostcode:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-531-Distributor-Registered-Address-Postcode'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-531-Distributor-Registered-Address-Postcode'
             distributorBillingContactName:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-532-Distributor-Billing-Contact-Name'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-532-Distributor-Billing-Contact-Name'
             distributorBillingEmail:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-533-Distributor-Billing-Email'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-533-Distributor-Billing-Email'
             distributorBillingTelephoneNumber:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-534-Distributor-Billing-Telephone-Number'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-534-Distributor-Billing-Telephone-Number'
             distributorBillingAddressLine1:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-535-Distributor-Billing-Address-Line-1'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-535-Distributor-Billing-Address-Line-1'
             distributorBillingAddressLine2:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-536-Distributor-Billing-Address-Line-2'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-536-Distributor-Billing-Address-Line-2'
             distributorBillingAddressLine3:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-537-Distributor-Billing-Address-Line-3'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-537-Distributor-Billing-Address-Line-3'
             distributorBillingAddressLine4:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-538-Distributor-Billing-Address-Line-4'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-538-Distributor-Billing-Address-Line-4'
             distributorBillingAddressLine5:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-539-Distributor-Billing-Address-Line-5'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-539-Distributor-Billing-Address-Line-5'
             distributorBillingAddressLine6:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-540-Distributor-Billing-Address-Line-6'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-540-Distributor-Billing-Address-Line-6'
             distributorBillingAddressLine7:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-541-Distributor-Billing-Address-Line-7'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-541-Distributor-Billing-Address-Line-7'
             distributorBillingAddressLine8:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-542-Distributor-Billing-Address-Line-8'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-542-Distributor-Billing-Address-Line-8'
             distributorBillingAddressLine9:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-543-Distributor-Billing-Address-Line-9'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-543-Distributor-Billing-Address-Line-9'
             distributorBillingPostcode:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-544-Distributor-Billing-Postcode'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-544-Distributor-Billing-Postcode'
             distributorBankSortCode:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-545-Distributor-Bank-Sort-Code'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-545-Distributor-Bank-Sort-Code'
             distributorBankAccountNumber:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-546-Distributor-Bank-Account-Number'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-546-Distributor-Bank-Account-Number'
             distributorVATRegistrationNumber:                        
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-547-Distributor-VAT-Registration-Number'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-547-Distributor-VAT-Registration-Number'
         required:
           - distributorID
           - distributorRegisteredName
@@ -1128,37 +1128,37 @@ components:
             false        
         properties:
             supplierMPID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-495-Supplier-MPID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-495-Supplier-MPID'
             supplierDIPID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-087-Supplier-DIP-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-087-Supplier-DIP-ID'
             LDSOBillingSupplierTradingName:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-548-LDSO-Billing-Supplier-Trading-Name'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-548-LDSO-Billing-Supplier-Trading-Name'
             LDSOBillingSupplierVATRegistrationNumber:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-549-LDSO-Billing-Supplier-VAT-Registration-Number'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-549-LDSO-Billing-Supplier-VAT-Registration-Number'
             LDSOBillingSupplierVATadditionaltext:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-550-LDSO-Billing-Supplier-VAT-additional-text'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-550-LDSO-Billing-Supplier-VAT-additional-text'
             LDSOBillingSupplierBill-ToContactName:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-551-LDSO-Billing-Supplier-Bill-To-Contact-Name'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-551-LDSO-Billing-Supplier-Bill-To-Contact-Name'
             LDSOBillingSupplierBill-ToAddressLine1:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-552-LDSO-Billing-Supplier-Bill-To-Address-Line-1'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-552-LDSO-Billing-Supplier-Bill-To-Address-Line-1'
             LDSOBillingSupplierBill-ToAddressLine2:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-553-LDSO-Billing-Supplier-Bill-To-Address-Line-2'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-553-LDSO-Billing-Supplier-Bill-To-Address-Line-2'
             LDSOBillingSupplierBill-ToAddressLine3:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-554-LDSO-Billing-Supplier-Bill-To-Address-Line-3'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-554-LDSO-Billing-Supplier-Bill-To-Address-Line-3'
             LDSOBillingSupplierBill-ToAddressLine4:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-555-LDSO-Billing-Supplier-Bill-To-Address-Line-4'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-555-LDSO-Billing-Supplier-Bill-To-Address-Line-4'
             LDSOBillingSupplierBill-ToAddressLine5:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-556-LDSO-Billing-Supplier-Bill-To-Address-Line-5'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-556-LDSO-Billing-Supplier-Bill-To-Address-Line-5'
             LDSOBillingSupplierBill-ToAddressLine6:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-557-LDSO-Billing-Supplier-Bill-To-Address-Line-6'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-557-LDSO-Billing-Supplier-Bill-To-Address-Line-6'
             LDSOBillingSupplierBill-ToAddressLine7:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-558-LDSO-Billing-Supplier-Bill-To-Address-Line-7'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-558-LDSO-Billing-Supplier-Bill-To-Address-Line-7'
             LDSOBillingSupplierBill-ToAddressLine8:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-559-LDSO-Billing-Supplier-Bill-To-Address-Line-8'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-559-LDSO-Billing-Supplier-Bill-To-Address-Line-8'
             LDSOBillingSupplierBill-ToAddressLine9:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-560-LDSO-Billing-Supplier-Bill-To-Address-Line-9'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-560-LDSO-Billing-Supplier-Bill-To-Address-Line-9'
             LDSOBillingSupplierBill-ToPostcode:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-561-LDSO-Billing-Supplier-Bill-To-Postcode'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-561-LDSO-Billing-Supplier-Bill-To-Postcode'
         required:
             - supplierMPID
             - supplierDIPID
@@ -1186,48 +1186,48 @@ components:
         properties:
 # DIN-1037
 # LDSOBillingAccountReference:
-#                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-563-LDSO-Billing-Account-Reference'
+#                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-563-LDSO-Billing-Account-Reference'
 #            DUoSTariffID:
-#                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-612-LDSO-Billing-DUoS-Tariff-ID'
+#                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-612-LDSO-Billing-DUoS-Tariff-ID'
             #DIN-771     
 #            listOfMPANSonSite:
-#                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-566-List-Of-MPANS-On-Site'
+#                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-566-List-Of-MPANS-On-Site'
 #            misalignedMultiMPANSite:
-#                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-567-Misaligned-Multi-MPAN-Site'
+#                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-567-Misaligned-Multi-MPAN-Site'
 #            LDSOBillingSiteCapacity:
-#                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-568-LDSO-Billing-Site-Capacity-'
+#                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-568-LDSO-Billing-Site-Capacity-'
 
             GSPGroupID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-037-GSP-Group-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-037-GSP-Group-ID'
             LDSOBillingSiteID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-565-LDSO-Billing-Site-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-565-LDSO-Billing-Site-ID'
             LDSOBillingSiteAddressLine1:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-569-LDSO-Billing-Site-Address-Line-1'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-569-LDSO-Billing-Site-Address-Line-1'
             LDSOBillingSiteAddressLine2:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-570-LDSO-Billing-Site-Address-Line-2'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-570-LDSO-Billing-Site-Address-Line-2'
             LDSOBillingSiteAddressLine3:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-571-LDSO-Billing-Site-Address-Line-3'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-571-LDSO-Billing-Site-Address-Line-3'
             LDSOBillingSiteAddressLine4:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-572-LDSO-Billing-Site-Address-Line-4'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-572-LDSO-Billing-Site-Address-Line-4'
             LDSOBillingSiteAddressLine5:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-573-LDSO-Billing-Site-Address-Line-5'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-573-LDSO-Billing-Site-Address-Line-5'
             LDSOBillingSiteAddressLine6:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-574-LDSO-Billing-Site-Address-Line-6'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-574-LDSO-Billing-Site-Address-Line-6'
             LDSOBillingSiteAddressLine7:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-575-LDSO-Billing-Site-Address-Line-7'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-575-LDSO-Billing-Site-Address-Line-7'
             LDSOBillingSiteAddressLine8:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-576-LDSO-Billing-Site-Address-Line-8'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-576-LDSO-Billing-Site-Address-Line-8'
             LDSOBillingSiteAddressLine9:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-577-LDSO-Billing-Site-Address-Line-9'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-577-LDSO-Billing-Site-Address-Line-9'
             LDSOBillingSitePostCode:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-578-LDSO-Billing-Site-Post-Code'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-578-LDSO-Billing-Site-Post-Code'
                 
             R900-04:
               #  Invoice Data  
                 description: LDSO Billing Invoive Data
                 type : array
                 items: 
-                    $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/ECS-CommonBlocks-unresolved.yaml#/components/schemas/R900-04'
+                    $ref: 'ECS-CommonBlocks-unresolved.yaml#/components/schemas/R900-04'
                 
                 
         required:
@@ -1255,44 +1255,44 @@ components:
         properties:
 # DIN-1037 - moved from R900-03
             DUoSTariffID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-612-LDSO-Billing-DUoS-Tariff-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-612-LDSO-Billing-DUoS-Tariff-ID'
             listOfMPANSonSite:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-566-List-Of-MPANS-On-Site'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-566-List-Of-MPANS-On-Site'
             misalignedMultiMPANSite:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-567-Misaligned-Multi-MPAN-Site'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-567-Misaligned-Multi-MPAN-Site'
             LDSOBillingSiteCapacity:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-568-LDSO-Billing-Site-Capacity-'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-568-LDSO-Billing-Site-Capacity-'
 #        
             LDSOBillingInvoiceType:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-580-LDSO-Billing-Invoice-Type'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-580-LDSO-Billing-Invoice-Type'
             taxPointDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-581-Tax-Point-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-581-Tax-Point-Date'
             invoiceDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-582-Invoice-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-582-Invoice-Date'
             invoiceDueDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-583-Invoice-Due-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-583-Invoice-Due-Date'
             LDSOBilingInvoiceNumber:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-584-LDSO-Biling-Invoice-Number'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-584-LDSO-Biling-Invoice-Number'
             siteSpecificDUoSInvoiceType:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-585-Site-Specific-DUoS-Invoice-Type'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-585-Site-Specific-DUoS-Invoice-Type'
             LDSOBillingCancelledInvoiceNumber:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-586-LDSO-Billing-Cancelled-Invoice-Number'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-586-LDSO-Billing-Cancelled-Invoice-Number'
             cancelledInvoiceDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-587-Cancelled-Invoice-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-587-Cancelled-Invoice-Date'
             chargePeriodStartDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-588-Charge-Period-Start-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-588-Charge-Period-Start-Date'
             chargePeriodEndDate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-589-Charge-Period-End-Date'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-589-Charge-Period-End-Date'
             maximumDemandInTheInvoicePeriod:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-590-Maximum-Demand-In-The-Invoice-Period'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-590-Maximum-Demand-In-The-Invoice-Period'
             maximumDemandInTheInvoicePeriodDateTime:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-591-Maximum-Demand-In-The-Invoice-Period-Date-Time'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-591-Maximum-Demand-In-The-Invoice-Period-Date-Time'
             totalInvoiceAmountExVAT:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-592-Total-Invoice-Amount-Ex-VAT'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-592-Total-Invoice-Amount-Ex-VAT'
             totalInvoiceVAT:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-593-Total-invoice-VAT'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-593-Total-invoice-VAT'
             totalInvoiceAmountIncVAT:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-594-Total-Invoice-Amount-Inc-VAT'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-594-Total-Invoice-Amount-Inc-VAT'
           #   DIN-859  
             R900-05:
               description: Invoice Lines
@@ -1334,19 +1334,19 @@ components:
             false        
         properties:
             chargeType:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-596-Charge-Type'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-596-Charge-Type'
             numberOfDaysBilled:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-597-Number-Of-Days-Billed'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-597-Number-Of-Days-Billed'
             quantity:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-598-Quantity'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-598-Quantity'
             price:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-599-Price'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-599-Price'
             totalChargeForChargeTypeExVAT:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-600-Total-Charge-For-Charge-Type-Ex-VAT'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-600-Total-Charge-For-Charge-Type-Ex-VAT'
             VATRateCode:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-601-VAT-Rate-Code'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-601-VAT-Rate-Code'
             VATRate:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-602-VAT-Rate'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-602-VAT-Rate'
         required:
             - chargeType
             - numberOfDaysBilled
@@ -1370,9 +1370,9 @@ components:
             - GSPGroupID
         properties:
             distributorID:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-029-Distributor-ID'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-029-Distributor-ID'
             GSPGroupID:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-037-GSP-Group-ID'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-037-GSP-Group-ID'
             
     R901-02:
         description: Settlement Run Info (Mandatory)
@@ -1384,9 +1384,9 @@ components:
           - runNumber
         properties:
             settlementCode:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-160-Settlement-Code'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-160-Settlement-Code'
             runNumber:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-161-Run-Number'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-161-Run-Number'
 
 
 
@@ -1400,7 +1400,7 @@ components:
           - settlementDate
         properties:
             settlementDate:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-305-Settlement-Date'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-305-Settlement-Date'
 # either R901-04 or R901-05
             R901-04:
                 type : array
@@ -1421,9 +1421,9 @@ components:
           - supplierDIPID
         properties:
             supplierDIPID:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-087-Supplier-DIP-ID'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-087-Supplier-DIP-ID'
             supplierMPID:
-                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-495-Supplier-MPID'
+                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-495-Supplier-MPID'
             R901-06:
                 type : array
                 items: 
@@ -1439,9 +1439,9 @@ components:
             false        
         properties:
             LDSODIPID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-613-LDSO-DIPID'            
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-613-LDSO-DIPID'            
             embeddedLDSOID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-483-Embedded-LDSO-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-483-Embedded-LDSO-ID'
             R901-06:
                 type : array
                 items: 
@@ -1456,13 +1456,13 @@ components:
             false        
         properties:
             dailyTotalMSIDCount:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-608-Daily-Total-MSID-Count'                
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-608-Daily-Total-MSID-Count'                
             dailyTotalMSIDCharge:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-609-Daily-Total-MSID-Charge'                
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-609-Daily-Total-MSID-Charge'                
             dailyTotalUnitVolume:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-610-Daily-Total-Unit-Volume'                
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-610-Daily-Total-Unit-Volume'                
             dailyTotalUnitCharge:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-611-Daily-Total-Unit-Charge'  
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-611-Daily-Total-Unit-Charge'  
             R901-07:
               description: Tariff Characteristics list
               type: array
@@ -1477,21 +1477,21 @@ components:
             false        
         properties:
             DUoSTariffID:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-345-DUoS-Tariff-ID'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-345-DUoS-Tariff-ID'
             energyDirection:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-035-Energy-Direction'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-035-Energy-Direction'
             domesticPremiseIndicator:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-030-Domestic-Premise-Indicator'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-030-Domestic-Premise-Indicator'
             dailyTariffNumberOfMSIDs:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-603-Daily-Tariff-Number-Of-MSIDs'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-603-Daily-Tariff-Number-Of-MSIDs'
             dailyTariffMSIDCharge:
-                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-604-Daily-Tariff-MSID-Charge'
+                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-604-Daily-Tariff-MSID-Charge'
 #  DIN-959  chargeBand:
-#                $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-605-Charge-Band'
+#                $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-605-Charge-Band'
 #            dailyUncorrectedVolumeForChargeBand:
-#                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-606-Daily-Uncorrected-Volume-For-Charge-Band'
+#                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-606-Daily-Uncorrected-Volume-For-Charge-Band'
 #            totalVolumeChargeForChargeBand:
-#                  $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-607-Total-Volume-Charge-For-Charge-Band'
+#                  $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-607-Total-Volume-Charge-For-Charge-Band'
             R901-08:
               description: Charge Bandlist
               type: array
@@ -1505,11 +1505,11 @@ components:
             false        
         properties:
           chargeBand:
-              $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-605-Charge-Band'
+              $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-605-Charge-Band'
           dailyUncorrectedVolumeForChargeBand:
-              $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-606-Daily-Uncorrected-Volume-For-Charge-Band'
+              $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-606-Daily-Uncorrected-Volume-For-Charge-Band'
           totalVolumeChargeForChargeBand:
-              $ref: 'https://raw.githubusercontent.com/elexon-data/dip-api-documentation/main/DataCatalogue-unresolved.yaml#/components/schemas/DI-607-Total-Volume-Charge-For-Charge-Band'
+              $ref: 'DataCatalogue-unresolved.yaml#/components/schemas/DI-607-Total-Volume-Charge-For-Charge-Band'
 
                 
 
