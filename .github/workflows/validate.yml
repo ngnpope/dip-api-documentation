@@ -14,7 +14,7 @@ jobs:
           node-version: '24'
 
       - name: Install Redocly CLI
-        run: npm install -g @redocly/cli@1
+        run: npm install -g @redocly/cli@2.34
 
       - name: Validate YAML resolves without errors
         run: |
