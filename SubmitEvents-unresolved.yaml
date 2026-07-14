@@ -76,6 +76,7 @@
 #                   74972/018   Bulk Message requeue 
 #                   74971/017   Bulk Message replay
 #       01/07/2026  73686/027   Message Delivery Status API – delivery status interrogation by SUR  
+#       14/07/2026              Add 5xx responses to new APIs
 #                    
 # 2.1.0 02/02/2026              Support for June/July release
 #       17/03/2026  51136/      Changes to Replay to support bulk replay
@@ -672,6 +673,15 @@ paths:
         '429':
             description: Too Many Requests
 
+        '500':
+          description: Internal Server Error
+        '502': 
+          description: Bad Gateway
+        '503':
+          description: Service Unavailable
+        '504': 
+          description: Gateway Timeout
+
 
   /statusmessage: 
     post:
@@ -856,8 +866,16 @@ paths:
             description: No Content
         '401':
             description: Unauthorised Error            
+        '500':
+          description: Internal Server Error
+        '502': 
+          description: Bad Gateway
+        '503':
+          description: Service Unavailable
+        '504': 
+          description: Gateway Timeout
 
-## Status Message replay new in verison 2.0.1
+## Status Message replay new in verison 2.2.0
   /statusmessage/replay/{recipient-id}:
     post:
       summary: Replay Status Messages  
@@ -912,6 +930,15 @@ paths:
             description: Unauthorised Error            
         '403':
             description: Forbidden
+        '500':
+          description: Internal Server Error
+        '502': 
+          description: Bad Gateway
+        '503':
+          description: Service Unavailable
+        '504': 
+          description: Gateway Timeout
+
     parameters:
         - $ref: '#/components/parameters/MessageRecipientId'
         - $ref: '#/components/parameters/CommonSignatureHeader'
@@ -964,6 +991,14 @@ paths:
             description: Forbidden
         '429':
             description: Too Many Requests
+        '500':
+          description: Internal Server Error
+        '502': 
+          description: Bad Gateway
+        '503':
+          description: Service Unavailable
+        '504': 
+          description: Gateway Timeout
 
     parameters:
         - $ref: '#/components/parameters/MessageRecipientId'
@@ -1011,6 +1046,14 @@ paths:
             description: Forbidden
         '429':
             description: Too Many Requests
+        '500':
+          description: Internal Server Error
+        '502': 
+          description: Bad Gateway
+        '503':
+          description: Service Unavailable
+        '504': 
+          description: Gateway Timeout
 
 #       01/07/2026  73686/027
 #@@   Add delivery status API so DIP users can establish the delivery status of messages 
@@ -1057,6 +1100,14 @@ paths:
             description: Forbidden
         '429':
             description: Too Many Requests
+        '500':
+          description: Internal Server Error
+        '502': 
+          description: Bad Gateway
+        '503':
+          description: Service Unavailable
+        '504': 
+          description: Gateway Timeout
 
 
 
