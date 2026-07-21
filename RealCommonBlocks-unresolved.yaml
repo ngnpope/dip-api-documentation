@@ -1851,6 +1851,7 @@ components:
 # Add B085 & B086 to release 2.0.1 to support CP1607
     B085:    
       description: Current Supplier Details
+      type: object
       additionalProperties:
               false        
       properties:         
